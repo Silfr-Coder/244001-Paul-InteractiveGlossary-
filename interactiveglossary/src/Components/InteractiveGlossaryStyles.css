@@ -8,9 +8,9 @@
 }
 
 .button-link-column {
-  width: 200px;
+  max-width: 200px;
   height: 100vh;
-  padding: 20px;
+  padding: 10px;
   background-color: #f0f0f0;
   font-size: large;
 }
@@ -21,10 +21,9 @@
   text-align: center;
   align-items: center;
 }
-.button-link {
+.topic-link {
   display: block;
-  width: 50%;
+  width: 100%;
   padding: 10px;
   margin: 20px;
-  background-color: lightgrey;
 }

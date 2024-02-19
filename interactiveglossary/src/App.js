@@ -4,32 +4,32 @@ import "./Components/InteractiveGlossaryStyles.css";
 import Topics from "./Components/Topics";
 
 function App() {
-  const [currentTopic, setCurrentTopic] = useState([]);
-
-  const [topic, setTopic] = useState([
-    new Topics("React", "This is some text about React..."),
-    new Topics("JSX", "This is some text about JSX..."),
-    new Topics(
-      "Functional Components",
-      "Here's some text on functional components"
-    ),
+  const [topics, setTopics] = useState([
+    new Topics("Variables", "This is some text about Variables..."),
+    new Topics("Classes", "This is some text about Classes..."),
+    new Topics("Props", "Here's some text on props"),
+    new Topics("Functional components", "Here's some text about "),
   ]);
+
+  const [currentTopic, setCurrentTopic] = useState(0);
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="button-link-column">
-          Click on a links for text
-          <button onClick={( => )}
-          className="button-link">React</button>
-          <button className="button-link">JSX</button>
-          <button className="button-link">Functional Components</button>
-          <button className="button-link">State</button>
-          <Buttons />
-        </div>
+        {topics.map(() => {
+          return (
+            <div className="button-link-column">
+              {topics[currentTopic].title}
+            </div>
+          );
+        })}
+        {/* <div className="button-link-column">
+          <h2>{topics[currentTopic].title}</h2>
+        </div> */}
+
         <div className="concept-text">
-          <h1>Lets explore the concept of: {topic[0].title}</h1>
-          <h1>{topic[0].topicText}</h1>
+          <h1>Lets explore the concept of: {topics[currentTopic].title}</h1>
+          <h1>{topics[currentTopic].topicText}</h1>
         </div>
       </header>
     </div>
