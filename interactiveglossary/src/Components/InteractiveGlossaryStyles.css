@@ -1,0 +1,30 @@
+.App {
+  display: flex;
+}
+
+.App-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-link-column {
+  width: 200px;
+  height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
+  font-size: large;
+}
+
+.concept-text {
+  flex-grow: 1;
+  padding: 20px;
+  text-align: center;
+  align-items: center;
+}
+.button-link {
+  display: block;
+  width: 50%;
+  padding: 10px;
+  margin: 20px;
+  background-color: lightgrey;
+}
