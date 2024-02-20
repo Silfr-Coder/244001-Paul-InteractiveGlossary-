@@ -9,29 +9,31 @@ function App() {
     new Topics("Classes", "This is some text about Classes..."),
     new Topics("Props", "Here's some text on props"),
     new Topics("Functional components", "Here's some text about "),
+    new Topics("Class", "This is some text on Classes"),
   ]);
 
   const [currentTopic, setCurrentTopic] = useState(0);
 
   return (
     <div className="App">
-      <header className="App-header">
-        {topics.map(() => {
-          return (
-            <div className="button-link-column">
-              {topics[currentTopic].title}
-            </div>
-          );
-        })}
-        {/* <div className="button-link-column">
-          <h2>{topics[currentTopic].title}</h2>
-        </div> */}
-
-        <div className="concept-text">
-          <h1>Lets explore the concept of: {topics[currentTopic].title}</h1>
-          <h1>{topics[currentTopic].topicText}</h1>
+      <div className="concept-container">
+        <div className="topic-column">
+          <h2>Concepts</h2>
+          <hr></hr>
+          {topics.map((topic) => {
+            return (
+              <li className="button-link-column">
+                {topic.title}
+                <hr class="h-line" />
+              </li>
+            );
+          })}
         </div>
-      </header>
+      </div>
+      <div className="concept-text">
+        <h1>Lets explore the concept of: {topics[currentTopic].title}</h1>
+        <h1>{topics[currentTopic].topicText}</h1>
+      </div>
     </div>
   );
 }

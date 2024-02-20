@@ -2,17 +2,45 @@
   display: flex;
 }
 
-.App-header {
+.concept-container {
   display: flex;
   flex-direction: row;
+  height: 100vh;
+  background-color: #f0f0f0;
+  color: blue;
+}
+
+.h-line {
+  height: 2px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+.button-link-column:hover {
+  color: darkmagenta;
+  box-shadow: 20px black;
+  opacity: 50%;
 }
 
 .button-link-column {
-  max-width: 200px;
-  height: 100vh;
-  padding: 10px;
+  width: auto;
+  height: auto;
+  position: relative;
+  text-align: center;
+  align-items: center;
   background-color: #f0f0f0;
+}
+
+.topic-column {
   font-size: large;
+  font-weight: bolder;
+  padding: 0px;
+  height: 100px;
+  width: min-content;
+  position: relative;
+  padding-top: 0px;
+  background-color: #f0f0f0;
 }
 
 .concept-text {
@@ -21,9 +49,11 @@
   text-align: center;
   align-items: center;
 }
-.topic-link {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  margin: 20px;
+h2 {
+  font-style: italic;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
 }
