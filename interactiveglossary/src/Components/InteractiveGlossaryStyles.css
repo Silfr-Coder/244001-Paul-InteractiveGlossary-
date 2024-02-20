@@ -11,25 +11,33 @@
 }
 
 .h-line {
+  width: 25%;
   height: 2px;
   border-width: 0;
   color: gray;
   background-color: gray;
 }
 
-.button-link-column:hover {
-  color: darkmagenta;
-  box-shadow: 20px black;
-  opacity: 50%;
+.list {
+  width: auto;
+  background-color: #f0f0f0;
 }
 
 .button-link-column {
-  width: auto;
+  display: inline-block;
+  width: 100%;
   height: auto;
   position: relative;
   text-align: center;
   align-items: center;
   background-color: #f0f0f0;
+}
+
+.button-link-column:hover {
+  color: darkmagenta;
+  box-shadow: 20px black;
+  opacity: 50%;
+  cursor: pointer;
 }
 
 .topic-column {

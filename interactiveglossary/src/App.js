@@ -1,15 +1,23 @@
 import { useState } from "react";
-import Buttons from "./Components/Buttons";
+import HandleTopicClick from "./Components/HandleTopicClick";
 import "./Components/InteractiveGlossaryStyles.css";
 import Topics from "./Components/Topics";
 
 function App() {
   const [topics, setTopics] = useState([
     new Topics("Variables", "This is some text about Variables..."),
+    new Topics("Functions", "This is some text on Functions."),
+    new Topics("Control Structures", "This is some text on Control Structures"),
+    new Topics("Data Types", "Here is some text on Data Types"),
+    new Topics(
+      "Conditional Statements",
+      "Here is some text on Conditional Statements"
+    ),
+    new Topics("Loops", "Here is some text on Loops"),
     new Topics("Classes", "This is some text about Classes..."),
-    new Topics("Props", "Here's some text on props"),
-    new Topics("Functional components", "Here's some text about "),
-    new Topics("Object Oriented Programming", "This is some text on OOP"),
+    new Topics("Inheritance", "Here's some text on Inheritance..."),
+    new Topics("Arrays", "Here's some text about Arrays"),
+    new Topics("Objects", "This is some text on Objects"),
   ]);
 
   const [currentTopic, setCurrentTopic] = useState(0);
@@ -24,6 +32,8 @@ function App() {
         <div className="topic-column">
           <h2>Concepts</h2>
           <hr></hr>
+          {/* include index to allow map to loop through and pass current topic to
+          handle click event */}
           {topics.map((topic, index) => {
             return (
               <li
