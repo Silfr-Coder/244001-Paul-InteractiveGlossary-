@@ -1,0 +1,80 @@
+// [
+//     {
+//       "title": "Variables",
+//       "text": "Variables are symbols used to represent memory locations where data values can be\nstored and manipulated within a program. They provide a way to label and reference data in a\nprogram's memory.\n\nIn this example:\n- We declare variables `age`, `name`, and `isAdmin` to store the age, name, and\nadministrative status of a person, respectively.\n- We initialize the variables with values: `age` with `25`, `name` with `John`,\nand `isAdmin` with `true`.\n- We later update the value of the `name` variable to `Jane` using the assignment operator (`=`).\n- Variables can store different types of data, such as numbers (`age`), strings (`name`),\nand booleans (`isAdmin`)."
+   
+//     },
+//     {
+//       "title": "Functions",
+//       "text": "This is some text about Functions..."
+//     },
+//     {
+//         "title": "Variables", 
+//         "text" : "This is some text about Variables..."
+//     },
+//     {
+//         "title": "Functions", 
+//         "text": "This is some text on Functions."
+//     },
+   
+//     {     
+//         "title":"Control Structures",
+//         "text": "This is some text on Control Structures"
+//     },
+
+//     { 
+//         "title": "Data Types", 
+//         "text": "Here is some text on Data Types"
+//     },
+
+//     { 
+//         "title": "Conditional Statements",
+//         "text": "Here is some text on Conditional Statements"
+//     },
+//     {
+//         "title": "Loops", 
+//         "text": "Here is some text on Loops"
+//     },
+//     { 
+//         "title": "Classes", 
+//         "text": "This is some text about Classes..."
+//     },
+//     { 
+//         "title": "Inheritance", 
+//         "text": "Here's some text on Inheritance..."
+//     },
+//     {
+//         "title": "Arrays", 
+//         "text": "Here's some text about Arrays"
+//     },
+//     {
+//         "title": "Objects", 
+//         "text": "This is some text on Objects" 
+//     }
+//   ]
+  
+
+  
+  // Function declaration
+function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+// Function expression
+const add = function(a, b) {
+  return a + b;
+};
+
+// Arrow function (introduced in ES6)
+const multiply = (x, y) => {
+  return x * y;
+};
+
+// Function call
+greet("Alice"); // Output: Hello, Alice!
+
+const result1 = add(3, 5);
+console.log("Result of addition:", result1); // Output: Result of addition: 8
+
+const result2 = multiply(4, 6);
+console.log("Result of multiplication:", result2); // Output: Result of multiplication: 24

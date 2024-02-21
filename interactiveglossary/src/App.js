@@ -1,12 +1,17 @@
 import { useState } from "react";
-import HandleTopicClick from "./Components/HandleTopicClick";
 import "./Components/InteractiveGlossaryStyles.css";
 import Topics from "./Components/Topics";
+import variablesImage from "./Images/variablesImage.jpeg";
+import functionsImage from "./Images/functionsImage.png";
 
 function App() {
   const [topics, setTopics] = useState([
-    new Topics("Variables", "This is some text about Variables..."),
-    new Topics("Functions", "This is some text on Functions."),
+    new Topics(
+      "Variables",
+      "This is some text about Variables...",
+      variablesImage
+    ),
+    new Topics("Functions", "This is some text on Functions.", functionsImage),
     new Topics("Control Structures", "This is some text on Control Structures"),
     new Topics("Data Types", "Here is some text on Data Types"),
     new Topics(
@@ -55,6 +60,7 @@ function App() {
           Lets explore the concept of: <h1>{topics[currentTopic].title}</h1>
         </h2>
         <p>{topics[currentTopic].topicText}</p>
+        <img src={topics[currentTopic].image} width={700} />
       </div>
     </div>
   );
