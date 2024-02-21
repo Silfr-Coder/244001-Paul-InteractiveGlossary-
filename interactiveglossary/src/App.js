@@ -1,31 +1,12 @@
 import { useState } from "react";
 import "./Components/InteractiveGlossaryStyles.css";
-import Topics from "./Components/Topics";
-import variablesImage from "./Images/variablesImage.jpeg";
-import functionsImage from "./Images/functionsImage.png";
+import Topic from "./Components/Topic";
+import topicList from "./Components/Topic";
 
 function App() {
-  const [topics, setTopics] = useState([
-    new Topics(
-      "Variables",
-      "This is some text about Variables...",
-      variablesImage
-    ),
-    new Topics("Functions", "This is some text on Functions.", functionsImage),
-    new Topics("Control Structures", "This is some text on Control Structures"),
-    new Topics("Data Types", "Here is some text on Data Types"),
-    new Topics(
-      "Conditional Statements",
-      "Here is some text on Conditional Statements"
-    ),
-    new Topics("Loops", "Here is some text on Loops"),
-    new Topics("Classes", "This is some text about Classes..."),
-    new Topics("Inheritance", "Here's some text on Inheritance..."),
-    new Topics("Arrays", "Here's some text about Arrays"),
-    new Topics("Objects", "This is some text on Objects"),
-  ]);
-
+  const [topics, setTopics] = useState(topicList);
   const [currentTopic, setCurrentTopic] = useState(0);
+
   const handleTopicClick = (index) => {
     setCurrentTopic(index);
   };
@@ -61,6 +42,8 @@ function App() {
         </h2>
         <p>{topics[currentTopic].topicText}</p>
         <img src={topics[currentTopic].image} width={700} />
+        {/* <img src={variablesImage} width={700} /> */}
+        <p>Question: {topics[currentTopic].question}</p>
       </div>
     </div>
   );
